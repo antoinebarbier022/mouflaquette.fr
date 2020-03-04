@@ -25,14 +25,24 @@ export default {
 header{
     width:100%;
     height:80px;
+    display: flex;
+    justify-content: space-between;
+    
     color:white;
     text-align: left;
+    background:#6cf;
 }
 
 .menu ul, .menu li{
     padding:0;
     margin:0;
-    
+    display: flex;
+
+}
+
+.menu li{
+    flex-direction: row-reverse;
+    padding-left:20px;
 }
 
 h1{

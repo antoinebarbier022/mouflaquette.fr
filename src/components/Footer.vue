@@ -1,6 +1,7 @@
 <template>
     <footer>
-        <p>mouflaquettes@gmail.com</p>
+        <p><a href="mailto:mouflaquettes@gmail.com" target="_bank" title="mouflaquettes@gmail.com">mouflaquettes@gmail.com</a></p>
+        <p>© All right reserved - created by <a href="antoinebarbier.fr" title="antoinearbier.fr">Antoine Barbier</a></p>
     </footer>
 </template>
 
@@ -17,8 +18,6 @@ footer{
     height:80px;
     color:white;
     text-align: left;
-    position:absolute;
-    bottom:0;
     background:#6cf;
 }
 
