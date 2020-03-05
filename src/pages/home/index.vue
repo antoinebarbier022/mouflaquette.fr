@@ -23,5 +23,13 @@ export default {
         width:1080px;
         height:100%;
         margin:auto;
+
+        padding-top:20px;
+    }
+
+    @media (max-width: 1280px) {
+        #container{
+            width:90%;
+        }
     }
 </style>
