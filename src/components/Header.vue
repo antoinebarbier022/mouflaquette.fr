@@ -50,7 +50,7 @@ h1{
     display:flex;
     align-items: center;
     font-weight: 50;
-
+    font-weight: bold;
     font-size:42px;
     
     padding:0;
