@@ -1,8 +1,33 @@
 <template>
     <div class="home">
         <div class="link-streaming">
+            
+            <ButtonMusic 
+                title="Youtube" 
+                img="yt_logo_rgb_dark.png"
+                link=""
+            />
+            <ButtonMusic 
+                title="Deezer" 
+                img="Colored_Full_White@2x.png"
+                link=""
+            />
+            <ButtonMusic 
+                title="Spotify" 
+                img="Spotify_Logo_RGB_Green.png"
+                link=""
+            />
+            <ButtonMusic 
+                title="Apple Music" 
+                img="US-UK_Apple_Music_lockup_RGB_wht.svg"
+                link=""
+            />
+
+            
+            
+            <!--
             <a class="apple-music" href="https://geo.music.apple.com/fr/album/velours/1481116204?mt=1&app=music&ls=1" ></a>
-            <a class="apple-music-icon" href="https://geo.music.apple.com/fr/album/velours/1481116204?mt=1&app=music&ls=1" ></a>
+            <a class="apple-music-icon" href="https://geo.music.apple.com/fr/album/velours/1481116204?mt=1&app=music&ls=1" ></a>-->
         </div>
         <div class="img-mouflaquettes">
 
@@ -11,8 +36,13 @@
 </template>
 
 <script>
+import ButtonMusic from "@/components/buttons/button-music.vue"
+
 export default {
-    name: "Home"
+    name: "Home",
+    components:{
+        ButtonMusic
+    }
 }
 </script>
 
