@@ -24,14 +24,20 @@ export default {
   color: #2c3e50;
 }
 
+*{
+    margin:0;
+    padding:0;
+}
+
 html, body{
   width:100%;
   height:100%;
-  margin:0;
-  padding:0;
 }
+
 
 body{
   background-image: linear-gradient(110deg, #030020 0%, #16094C 30%, #C86DD7 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 </style>
