@@ -15,11 +15,12 @@ export default {
 
 footer{
     width:100%;
-    height: 80px;
+    height: 100px;
     display:flex;
-        justify-content: center;
+        justify-content:flex-end;
         flex-direction: column;
     color:white;
+    background-color: black;
 
 }
 

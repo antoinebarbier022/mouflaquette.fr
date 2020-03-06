@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 //Pages
-import Test from '@/components/test.vue';
+import NotreGroupe from '@/components/Notre-groupe.vue';
 
 
 Vue.use(VueRouter);
@@ -14,9 +14,9 @@ const routes = [
     name : 'home'
   },
   {
-    path: '/test',
-    name : 'test',
-    component: Test
+    path: '/notre-groupe',
+    name : 'notre-groupe',
+    component: NotreGroupe
   }
 ];
 
