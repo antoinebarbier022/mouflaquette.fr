@@ -1,13 +1,11 @@
 <template>
     <header>
-        <h1>Mouflaquettes</h1>
+        <router-link :to="{name: 'home'}"><h1>Mouflaquettes</h1></router-link>
         <div class="menu">
-            <ul>
-                <li class="lien_page" >Notre groupe</li>
-                <li class="icon facebook"></li>
-                <li class="icon twitter"></li>
-                <li class="icon instagram"></li>
-            </ul>
+                <router-link :to="{name: 'test'}" class="link">Notre groupe</router-link>
+                <router-link :to="{name: 'test'}" class="link icon facebook"></router-link>
+                <router-link :to="{name: 'test'}" class="link icon twitter"></router-link>
+                <router-link :to="{name: 'test'}" class="link icon instagram"></router-link>
             
         </div>
     </header>
@@ -30,18 +28,20 @@ header{
     text-align: left;
 }
 
-.menu ul, .menu li{
+.menu, .link{
     padding:0;
     margin:0;
     display: flex;
+        align-items: center;
     height:60px; /* même hauteur que le header */ 
 
 }
 
-.menu li{
+.menu .link{
     flex-direction: row-reverse;
     margin-left:40px;
-    align-items: center;
+    cursor:pointer;
+    font-size: 18px;
 }
 
 h1{
@@ -53,6 +53,7 @@ h1{
     
     padding:0;
     margin:0;
+    cursor:pointer;
 }
 
 .icon{
@@ -61,10 +62,6 @@ h1{
     background-repeat: no-repeat;
     background-size: auto 25px;
     background-position: center;
-}
-
-.lien_page{
-    font-size: 18px;
 }
 
 .facebook{
@@ -77,10 +74,17 @@ h1{
     background-image: url('~@/assets/instagram@3x.png');
 }
 
+.icon:hover, .link:hover{
+    opacity: 70%;
+}
 
-    @media (max-width: 680px) {
+
+    @media (max-width: 740px) {
         .menu{
             display:none;
+        }
+        header{
+            justify-content: center;
         }
     }
 </style>
