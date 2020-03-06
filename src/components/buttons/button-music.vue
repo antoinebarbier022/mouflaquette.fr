@@ -32,6 +32,7 @@ export default {
     }
     .button-music:hover{
         border:1px rgba(255, 255, 255, 0.35) solid;
+        background-color:rgba(255, 255, 255, 0.20);
     }
 
     .button-music-img{
