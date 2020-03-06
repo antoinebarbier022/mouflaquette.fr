@@ -24,7 +24,6 @@ export default {
     .button-music{
         width:300px;
         padding: 5px 10px 5px 10px;
-        margin-top:20px;
         border:1px transparent solid;
         background-color:rgba(255, 255, 255, 0.15);
         border-radius: 10px;
