@@ -1,21 +1,19 @@
 <template>
     <div id="container">
         <Header/>
-        <Main/> 
+        <router-view/>
         <Footer/>
     </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue"
-import Main from "@/components/Main.vue"
 import Footer from "@/components/Footer.vue"
 
 export default {
     name: 'Homeindex',
     components: {
         Header,
-        Main,
         Footer
     }
 }
@@ -26,7 +24,6 @@ export default {
         width:1080px;
         height:100%;
         margin:auto;
-
         padding-top:20px;
     }
 

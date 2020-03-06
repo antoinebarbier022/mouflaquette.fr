@@ -27,11 +27,14 @@ export default {
 <style scoped>
     .home{
         width:100%;
-        height:calc(100vh - 100px - 60px - 20px - 50px);
         display:flex;  
+        /* placer le footer en bas de la page notre groupe */
+            min-height: calc(100vh - 100px - 60px - 20px - 50px); /* - hauteur du footer et - hauteur du header - 
+                                                                    20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/
+            padding-top: 50px;
         background-image: url('~@/assets/mouflaquettes.png');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position:bottom;
         border-bottom: 1px solid white;
 
