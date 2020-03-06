@@ -3,6 +3,7 @@
         <router-link :to="{name: 'home'}"><h1>Mouflaquettes</h1></router-link>
         <div class="menu">
                 <router-link :to="{name: 'notre-groupe'}" class="link">Notre groupe</router-link>
+                <router-link :to="{name: 'notre-groupe'}" class="icon icon-notre-groupe"></router-link>
                 <a href="https://www.facebook.com/Mouflaquettes/" target="_blank" title="Facebook" class="link icon facebook"></a>
                 <a href="https://twitter.com/mouflaquettes" target="_blank" title="Twitter" class="link icon twitter"></a>
                 <a href="https://www.instagram.com/Mouflaquettes/" target="_blank" title="Instagram" class="link icon instagram"></a>
@@ -41,15 +42,16 @@ header{
     flex-direction: row-reverse;
     margin-left:40px;
     cursor:pointer;
+    font-weight: 700;
     font-size: 18px;
 }
 
 h1{
     display:flex;
     align-items: center;
+    font-weight: 50;
 
     font-size:42px;
-    font-weight: 100;
     
     padding:0;
     margin:0;
@@ -64,6 +66,18 @@ h1{
     background-position: center;
 }
 
+.icon-notre-groupe{
+    position: relative;
+        right:0;
+    background-image: url('~@/assets/reseaux-sociaux/notre-groupe@3x.png');
+    background-size: auto 40px;
+    padding:5px;
+    border-radius: 100%;
+}
+.icon-notre-groupe{
+        display:none;
+}
+
 .facebook{
     background-image: url('~@/assets/reseaux-sociaux/facebook@3x.png');
 }
@@ -75,16 +89,17 @@ h1{
 }
 
 .icon:hover, .link:hover{
-    opacity: 70%;
+    opacity: 80%;
 }
 
 
-    @media (max-width: 740px) {
-        .menu{
+    @media (max-width: 850px) {
+        .icon-notre-groupe{
+        display:flex;
+        align-self: flex-end;
+    }
+        .menu .facebook, .instagram, .twitter, .link{
             display:none;
-        }
-        header{
-            justify-content: center;
         }
     }
 </style>

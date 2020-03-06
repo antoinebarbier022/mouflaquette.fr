@@ -46,7 +46,8 @@ export default {
 
     .phrase-accroche{
         text-align: center;
-        padding:40px;
-        font-size: 36px;
+        padding-top:40px;
+        padding-bottom:40px;
+        font-size: 2.5vw;
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="button-music" @click="link" :title="title" >
+    <div class="button-music" @click="lien(link)" :title="title" >
         <div class="button-music-img" :style="{ backgroundImage: `url(${image})`}"></div>
     </div>
 </template>
@@ -16,14 +16,27 @@ export default {
         image: function(){
             return this.img ? require('@/assets/' + this.img) : require('@/assets/logo.png') ; 
         }
+    },
+    methods: {
+        lien(e){
+            if(e == null){
+                return false;
+            }
+            else{
+                window.open("https://"+e)
+            }
+        }
     }
 }
 </script>
 
 <style scoped>
     .button-music{
-        width:300px;
-        padding: 5px 10px 5px 10px;
+        width:100%;
+        max-width: 400px;
+        min-width: 400px;
+        max-height: 30px;
+        padding: 5px 0px 5px 0px;
         border:1px transparent solid;
         background-color:rgba(255, 255, 255, 0.15);
         border-radius: 10px;
@@ -40,7 +53,7 @@ export default {
             height:30px;
             margin:auto;
         background-repeat:no-repeat;
-        background-size: auto 25px;
+        background-size: auto 30px;
         background-position: center;
 
     }
