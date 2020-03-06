@@ -1,6 +1,5 @@
 <template>
     <div id="home">
-
     </div>
 </template>
 
@@ -13,7 +12,7 @@ export default {
 <style scoped>
     #home{
         width:100%;
-        min-height: calc(100vh - 80px - 60px - 20px); /* - hauteur du footer et - hauteur du header */
+        min-height: calc(100vh - 80px - 60px - 20px); /* - hauteur du footer et - hauteur du header - 20px(hauteur du padding-top du container)*/
     }
 
 </style>
