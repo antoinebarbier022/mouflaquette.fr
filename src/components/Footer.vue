@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <p>Nous contacter : <a href="mailto:mouflaquettes@gmail.com" target="_bank" title="mouflaquettes@gmail.com">mouflaquettes@gmail.com</a></p>
-        <p>© All right reserved - created by <a href="www.antoinebarbier.fr" target="_bank" title="antoinearbier.fr">Antoine Barbier</a></p>
+        <p>Nous contacter : <a href="mailto:mouflaquettes@gmail.com" target="_blank" title="mouflaquettes@gmail.com">mouflaquettes@gmail.com</a></p>
+        <p>© All right reserved - created by <a href="www.antoinebarbier.fr" target="_blank" title="antoinearbier.fr">Antoine Barbier</a></p>
     </footer>
 </template>
 
@@ -20,7 +20,6 @@ footer{
         justify-content:flex-end;
         flex-direction: column;
     color:white;
-    background-color: black;
 
 }
 

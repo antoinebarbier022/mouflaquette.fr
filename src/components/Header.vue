@@ -3,9 +3,9 @@
         <router-link :to="{name: 'home'}"><h1>Mouflaquettes</h1></router-link>
         <div class="menu">
                 <router-link :to="{name: 'notre-groupe'}" class="link">Notre groupe</router-link>
-                <a href="https://www.facebook.com" target="_bank" class="link icon facebook"></a>
-                <a href="https://www.twitter.com" target="_bank" class="link icon twitter"></a>
-                <a href="https://www.instagram.com" target="_bank" class="link icon instagram"></a>
+                <a href="https://www.facebook.com" target="_blank" class="link icon facebook"></a>
+                <a href="https://www.twitter.com" target="_blank" class="link icon twitter"></a>
+                <a href="https://www.instagram.com" target="_blank" class="link icon instagram"></a>
             
         </div>
     </header>
