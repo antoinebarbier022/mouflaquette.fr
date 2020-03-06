@@ -1,34 +1,12 @@
 <template>
     <div class="home">
-        <div class="link-streaming">
-            
-            <ButtonMusic 
-                title="Youtube" 
-                img="yt_logo_rgb_dark.png"
-                link=""
-            />
-            <ButtonMusic 
-                title="Deezer" 
-                img="Colored_Full_White@2x.png"
-                link=""
-            />
-            <ButtonMusic 
-                title="Spotify" 
-                img="Spotify_Logo_RGB_Green.png"
-                link=""
-            />
-            <ButtonMusic 
-                title="Apple Music" 
-                img="US-UK_Apple_Music_lockup_RGB_wht.svg"
-                link=""
-            />
-
-            
-            
-            <!--
-            <a class="apple-music" href="https://geo.music.apple.com/fr/album/velours/1481116204?mt=1&app=music&ls=1" ></a>
-            <a class="apple-music-icon" href="https://geo.music.apple.com/fr/album/velours/1481116204?mt=1&app=music&ls=1" ></a>-->
+        <div class="link-streaming">  
+            <ButtonMusic title="Youtube"        img="yt_logo_rgb_dark.png"                  link=""/>
+            <ButtonMusic title="Deezer"         img="Colored_Full_White@2x.png"             link=""/>
+            <ButtonMusic title="Spotify"        img="Spotify_Logo_RGB_Green.png"            link=""/>
+            <ButtonMusic title="Apple Music"    img="US-UK_Apple_Music_lockup_RGB_wht.svg"  link=""/>
         </div>
+
         <div class="img-mouflaquettes">
 
         </div>
@@ -47,32 +25,27 @@ export default {
 </script>
 
 <style scoped>
-    .img-mouflaquettes{
-        width:50%;
-        height: 400px;
-        opacity: 80%;
+    .home{
+        width:100%;
+        height:calc(100vh - 100px - 60px - 20px - 50px);
+        display:flex;  
         background-image: url('~@/assets/mouflaquettes.png');
         background-repeat: no-repeat;
-        background-size: auto 150%;
+        background-size: contain;
         background-position:bottom;
+        border-bottom: 1px solid white;
+
+    }
+    .link-streaming{
+        width:50%;
+        display:inline-block;  
     }
 
-    .link-streaming .apple-music{
-        width:140px;
-        height:30px;
-        display:inline-block;
-        overflow:hidden;
-        background-image:url(https://linkmaker.itunes.apple.com/fr-fr/lockup.svg?releaseDate=2019-09-23&kind=album&bubble=apple_music&style=standard-white);
-        background-repeat:no-repeat;
-        background-size: auto 100%;
+    .img-mouflaquettes{
+        display:inline-block;  
+        width:50%;
+        height:300px;
+
     }
-    .link-streaming .apple-music-icon{
-        width:40px;
-        height:40px;
-        display:inline-block;
-        overflow:hidden;
-        background-image:url(https://linkmaker.itunes.apple.com/embed/v1/app-icon.svg);
-        background-repeat:no-repeat;
-        background-size: auto 100%;
-    }
+
 </style>
