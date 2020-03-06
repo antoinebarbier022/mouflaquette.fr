@@ -19,7 +19,9 @@
                 lobortis enim. In vehicula tristique massa, at vestibulum diam placerat sed. Mauris a massa tincidunt, sollicitudin ante vel, 
                 tincidunt tellus.
             </p>
+            
         </div>
+        
         <h3>Notre histoire</h3>
     </div>
 </template>
