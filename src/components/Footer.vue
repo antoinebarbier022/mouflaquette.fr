@@ -1,7 +1,7 @@
 <template>
     <footer>
         <p>Nous contacter : <a class="email" href="mailto:mouflaquettes@gmail.com" target="_blank" title="mouflaquettes@gmail.com">mouflaquettes@gmail.com</a></p>
-        <p>Tous droits réservés © 2020 mouflaquettes.fr  /  Mouflaquettes.fr est réalisé par<a class="site-du-createur" href="www.antoinebarbier.fr" target="_blank" title="antoinearbier.fr">Antoine Barbier</a></p>
+        <p>Tous droits réservés © 2020 mouflaquettes.fr  /  Mouflaquettes.fr est réalisé par<a class="site-du-createur" href="https://www.antoinebarbier.fr" target="_blank" title="antoinearbier.fr">Antoine Barbier</a></p>
     </footer>
 </template>
 

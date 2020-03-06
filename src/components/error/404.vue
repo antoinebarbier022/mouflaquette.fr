@@ -18,7 +18,5 @@ export default {
         font-weight: bold;
         color: white;
         text-align: center;
-        padding-top:50px;
-        min-height: calc(100vh - 100px - 60px - 20px - 60px);
     }
 </style>

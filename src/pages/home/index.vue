@@ -1,7 +1,9 @@
 <template>
     <div id="container">
         <Header/>
-        <router-view/>
+        <div class="main">
+            <router-view/>
+        </div>
         <Footer/>
     </div>
 </template>
@@ -26,6 +28,10 @@ export default {
         margin:auto;
         padding-top:20px;
         
+    }
+    .main{
+        min-height: calc(100vh - 100px - 60px - 20px - 60px);
+        padding-top:50px;
     }
 
     @media (max-width: 1280px) {
