@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div id="main">
         <router-view/>
     </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-    #home{
+    #main{
         width:100%;
         min-height: calc(100vh - 100px - 60px - 20px - 50px); /* - hauteur du footer et - hauteur du header - 
                                                                     20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/

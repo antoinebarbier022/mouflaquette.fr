@@ -3,9 +3,9 @@
         <router-link :to="{name: 'home'}"><h1>Mouflaquettes</h1></router-link>
         <div class="menu">
                 <router-link :to="{name: 'notre-groupe'}" class="link">Notre groupe</router-link>
-                <a href="https://www.facebook.com" target="_blank" class="link icon facebook"></a>
-                <a href="https://www.twitter.com" target="_blank" class="link icon twitter"></a>
-                <a href="https://www.instagram.com" target="_blank" class="link icon instagram"></a>
+                <a href="https://www.facebook.com" target="_blank" title="facebook" class="link icon facebook"></a>
+                <a href="https://www.twitter.com" target="_blank" title="twitter" class="link icon twitter"></a>
+                <a href="https://www.instagram.com" target="_blank" title="instagram" class="link icon instagram"></a>
             
         </div>
     </header>
@@ -65,13 +65,13 @@ h1{
 }
 
 .facebook{
-    background-image: url('~@/assets/facebook@3x.png');
+    background-image: url('~@/assets/reseaux-sociaux/facebook@3x.png');
 }
 .twitter{
-    background-image: url('~@/assets/twitter@3x.png');
+    background-image: url('~@/assets/reseaux-sociaux/twitter@3x.png');
 }
 .instagram{
-    background-image: url('~@/assets/instagram@3x.png');
+    background-image: url('~@/assets/reseaux-sociaux/instagram@3x.png');
 }
 
 .icon:hover, .link:hover{
