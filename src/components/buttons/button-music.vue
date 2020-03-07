@@ -34,7 +34,7 @@ export default {
     .button-music{
         width:100%;
         max-width: 400px;
-        min-width: 400px;
+        min-width: 200px;
         max-height: 30px;
         padding: 5px 0px 5px 0px;
         border:1px transparent solid;

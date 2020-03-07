@@ -130,13 +130,41 @@ h1{
     opacity: 80%;
 }
 
+    @media (max-width: 1080px) {
+        .icon-notre-groupe{
+        display:flex;
+        align-self: flex-end;
+    }
+        .facebook, .instagram, .twitter, .icon-notre-groupe{
+            display:none;
+        }
+    }
 
     @media (max-width: 850px) {
         .icon-notre-groupe{
         display:flex;
         align-self: flex-end;
+        }
+    .link-text{
+            display:none;
+        }
+
+        h1{
+            font-size: 24px;
+        }
+
     }
-        .menu .facebook, .instagram, .twitter, .link{
+    @media (max-width: 550px) {
+        h1{
+            font-size: 22px;
+            justify-content: center;
+            padding-bottom:10px;
+        }
+        header{
+            flex-direction: column;
+        }
+        .icon-notre-groupe{
+            margin:auto;
             display:none;
         }
     }

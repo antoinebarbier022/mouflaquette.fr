@@ -7,8 +7,10 @@
             <ButtonMusic class="button-music" title="Apple Music"    img="US-UK_Apple_Music_lockup_RGB_wht.svg"  link="itunes.apple.com/ca/artist/mouflaquettes/1444479500"/>
         </div>
         
-        <div class="img-mouflaquettes">
-        </div>
+        <router-link :to="{name: 'notre-groupe'}">
+            <div class="img-mouflaquettes">
+            </div>
+        </router-link>
         
     </div>
 </template>

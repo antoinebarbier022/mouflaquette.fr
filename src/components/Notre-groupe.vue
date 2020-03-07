@@ -22,7 +22,6 @@
             
         </div>
         
-        <h3>Notre histoire</h3>
     </div>
 </template>
 
@@ -49,6 +48,6 @@ export default {
         text-align: center;
         padding-top:40px;
         padding-bottom:40px;
-        font-size: 2.5vw;
+        font-size: 36px;
     }
 </style>
