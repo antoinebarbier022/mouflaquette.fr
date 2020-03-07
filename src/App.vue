@@ -16,6 +16,12 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+ font-family: "Over There";
+ src: url("~@/assets/Over-There.ttf") format("truetype");
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
