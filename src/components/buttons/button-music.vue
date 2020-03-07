@@ -36,7 +36,7 @@ export default {
         max-width: 400px;
         min-width: 200px;
         max-height: 30px;
-        padding: 5px 0px 5px 0px;
+        padding: 8px 0px 8px 0px;
         border:1px transparent solid;
         background-color:rgba(255, 255, 255, 0.15);
         border-radius: 10px;
@@ -52,6 +52,7 @@ export default {
             width:160px;
             height:30px;
             margin:auto;
+
         background-repeat:no-repeat;
         background-size: auto 30px;
         background-position: center;
