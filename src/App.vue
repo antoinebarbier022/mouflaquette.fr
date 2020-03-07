@@ -53,12 +53,12 @@ html, body{
 body{
   background-image: linear-gradient(110deg, #030020 0%, #16094C 30%, #C86DD7 100%);
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }*/
 
 body {
 	background: linear-gradient(-45deg, #6f52ee, #8945c9, #281a66, #6750eb);
 	background-size: 400% 400%;
+  background-attachment: fixed;
 	animation: gradient 30s ease infinite;
 }
 
