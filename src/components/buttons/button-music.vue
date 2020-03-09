@@ -38,6 +38,7 @@ export default {
         max-height: 30px;
         padding: 8px 0px 8px 0px;
         border:1px transparent solid;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
         background-color:rgba(255, 255, 255, 0.15);
         border-radius: 10px;
         overflow:hidden;

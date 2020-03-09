@@ -66,6 +66,7 @@
         width:100%;
         height:auto;
         border-radius:5px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     }
 
     #title{
