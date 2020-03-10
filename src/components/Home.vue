@@ -32,7 +32,7 @@
         
         <router-link :to="{name: 'notre-groupe'}">
             <figure class="img-mouflaquettes">
-                <img src="@/assets/mouflaquettes.png" alt="">
+                <img src="@/assets//photos/mouflaquettes.png" alt="">
             </figure>
             <!--<div class="img-mouflaquettes">
             </div>-->
@@ -59,7 +59,7 @@ export default {
         display:flex;
             flex-direction: column;
         /* placer le footer en bas de la page notre groupe */
-            min-height: calc(100vh - 280px); /* - hauteur du footer et - hauteur du header - 
+            min-height: calc(100vh - 360px); /* - hauteur du footer et - hauteur du header - 
                                                                     20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/
 
     }
