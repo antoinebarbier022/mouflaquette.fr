@@ -2,8 +2,8 @@
     <header>
         <router-link :to="{name: 'home'}"><h1>MOuflaquettes</h1></router-link>
         <div class="menu">
-                <router-link :to="{name: 'notre-groupe'}" class="link link-text">Notre groupe</router-link>
-                <router-link :to="{name: 'notre-groupe'}" class="icon icon-notre-groupe"></router-link>
+                <router-link :to="{name: 'notre-groupe'}" title="Notre groupe" class="link link-text">Notre groupe</router-link>
+                <router-link :to="{name: 'notre-groupe'}" title="Notre groupe" class="icon icon-notre-groupe"></router-link>
                 <a href="https://www.facebook.com/Mouflaquettes/" target="_blank" title="Facebook" class="link icon facebook"></a>
                 <a href="https://twitter.com/mouflaquettes" target="_blank" title="Twitter" class="link icon twitter"></a>
                 <a href="https://www.instagram.com/Mouflaquettes/" target="_blank" title="Instagram" class="link icon instagram"></a>
@@ -166,6 +166,16 @@ h1{
         .icon-notre-groupe{
             margin:auto;
             display:none;
+        }
+    }
+    @media (max-width: 400px) {
+        h1{
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 300px) {
+        h1{
+            font-size: 14px;
         }
     }
 </style>

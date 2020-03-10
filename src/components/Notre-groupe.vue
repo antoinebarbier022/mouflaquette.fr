@@ -81,7 +81,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                     de gaieté. Après avoir sortis un premier album, Bouquet subtil, en décembre 2018 et réalisés une série de concerts, 
                                     nous avons produit un nouvel album, Velours, en septembre 2019. Depuis, nous préparons dans 
                                     l’ombre un retour explosif marqué par la sortie de nouveaux titres et le lancement d’une 
-                                    nouvelle tournée. Tenez vous prêts, les Mouflaquettes arrivent …`
+                                    nouvelle tournée. Tenez vous prêts, les Mouflaquettes arrivent…`
                     ,historique:
                         [
                             {   id:0,
@@ -178,7 +178,6 @@ import TemplateText from "@/components/content/template-text.vue"
 <style scoped>
     #notre-groupe {
         color: white;
-        text-align: left;
         /* placer le footer en bas de la page notre groupe */
         min-height: calc(100vh - 100px - 70px - 20px - 60px); /* - hauteur du footer et - hauteur du header - 
                                                                                 20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/
@@ -190,6 +189,7 @@ import TemplateText from "@/components/content/template-text.vue"
 
     h4, h5{
          font-size:1.1rem;
+         text-align: left;
     }
     h4{
         text-align: center;
@@ -275,6 +275,9 @@ import TemplateText from "@/components/content/template-text.vue"
             display: flex;
                 align-items: center; /* centrer le media*/
             min-width:100%;
+        }
+        .bloc-text-media .bloc-text .title{
+            text-align: center;
         }
     }
      @media (max-width:560px){
