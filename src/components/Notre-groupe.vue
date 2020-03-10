@@ -1,10 +1,10 @@
 <template>
   <div id="notre-groupe">
-    <h2 class="phrase-accroche">{{slogan}}</h2>
+    <h2 data-aos="fade" data-aos-duration="1000" class="phrase-accroche">{{slogan}}</h2>
     <div class="texte-presentation-du-groupe">
-        <TemplateText class="" :text="textPresentation" />
+        <TemplateText  data-aos="fade" data-aos-duration="1200" class="" :text="textPresentation" />
     </div>
-        <h4 >Nous sommes Paul, Aymeric et Amaury, nous formons les Mouflaquettes et voici notre histoire.</h4>
+        <h4 data-aos="fade" data-aos-duration="1500">Nous sommes Paul, Aymeric et Amaury, nous formons les Mouflaquettes et voici notre histoire.</h4>
 
         <div class="bloc-text-media" 
             v-for="event in historique" :key="event.id"
@@ -12,7 +12,8 @@
             
             <div class="bloc-text"
             :data-aos=" event.url ? (event.id%2 ? 'fade-right': 'fade-left') : 'fade' "
-            data-aos-duration="1500"
+            data-aos-duration="1600"
+            
             data-aos-once="true"
             data-aos-anchor-placement="center-bottom">
                 <h5 class="title">{{event.title}}</h5>
@@ -21,7 +22,8 @@
             <!-- conditions pour savoir quelle bloc de média afficher-->
             <div class="bloc-media" v-if="event.media === 'image' && event.url" 
                         :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
-                        data-aos-duration="1500"
+                        
+                        data-aos-duration="1600"
                         data-aos-once="true"
                         data-aos-anchor-placement="center-bottom">
                 <figure class="bloc-image">
@@ -30,7 +32,8 @@
             </div>
             <div class="bloc-media" v-if="event.media === 'audio' && event.url"
                         :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
-                        data-aos-duration="1500"
+                       
+                        data-aos-duration="1600"
                         data-aos-once="true"
                         data-aos-anchor-placement="center-bottom">
                 <audio controls>
@@ -41,13 +44,12 @@
             </div>
             <div class="bloc-media" v-if="event.media === 'video' && event.url"
                         :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
-                        data-aos-duration="1500"
+                        
+                        data-aos-duration="1600"
                         data-aos-once="true"
                         data-aos-anchor-placement="center-bottom">
                 <iframe
                     class="bloc-video"
-                    width="500"
-                    height="300"
                     style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;"
                     src="https://www.youtube-nocookie.com/embed/yYwptNiN3qk"
                     frameborder="0"
@@ -178,7 +180,7 @@ import TemplateText from "@/components/content/template-text.vue"
         color: white;
         text-align: left;
         /* placer le footer en bas de la page notre groupe */
-        min-height: calc(100vh - 100px - 60px - 20px - 50px); /* - hauteur du footer et - hauteur du header - 
+        min-height: calc(100vh - 100px - 70px - 20px - 60px); /* - hauteur du footer et - hauteur du header - 
                                                                                 20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/
     }
 
@@ -243,6 +245,11 @@ import TemplateText from "@/components/content/template-text.vue"
         border-radius:5px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     }
+
+     .bloc-media > .bloc-video {
+        width:500px;
+        height:300px;
+    }
     /* permet d'alterner text-image droite-gauche */
     /* mettre odd ou even pour choisir si ça commence par image à droite ou à gauche */
     #notre-groupe :nth-child(even){
@@ -270,7 +277,12 @@ import TemplateText from "@/components/content/template-text.vue"
             min-width:100%;
         }
     }
-
+     @media (max-width:560px){
+        .bloc-media > .bloc-video {
+            width:100%;
+            height:300px;
+        }
+     }
 
 
 </style>

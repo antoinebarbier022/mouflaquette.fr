@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-
+    
     .link-text {
         transition: 1s ease-in-out;
     }

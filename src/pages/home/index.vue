@@ -30,13 +30,18 @@ export default {
         
     }
     .main{
-        min-height: calc(100vh - 100px - 60px - 20px - 60px);
+        min-height: calc(100vh - 100px - 70px - 20px - 60px);
         padding-top:50px;
     }
 
     @media (max-width: 1280px) {
         #container{
             width:80%;
+        }
+    }
+    @media (max-width: 700px) {
+        #container{
+            width:90%;
         }
     }
 </style>

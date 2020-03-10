@@ -16,11 +16,11 @@ export default {
 footer{
     width:100%;
     height: 100px;
+    padding-bottom:20px;
     display:flex;
         justify-content:flex-end;
         flex-direction: column;
     color:white;
-
 }
 
 p,a{
