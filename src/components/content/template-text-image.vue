@@ -6,7 +6,7 @@
                 {{text}}
             </p>
         </div>
-        <figure :v-show="altImage ? true : false" v-if="image" class="bloc-image"  :style="positionImgRight ? imgRight : imgLeft " >
+        <figure :v-show="altImage ? true : false" v-if="image" class="bloc-image"  :style="positionImgText ? imgRight : imgLeft " >
             <img :src="require('@/assets/photos/'+image)" :alt="image" title=""/>
         </figure>
     </div>
@@ -21,7 +21,7 @@
             text: String,
             image: String,
             altImage : String,
-            positionImgRight: Number
+            positionImgText: Number
         },
         data(){
             return{
@@ -46,6 +46,10 @@
         width:100%;
         margin-top:50px;
         margin-bottom:50px;
+    }
+
+    p{
+        text-align:justify;
     }
     .bloc-text{
         margin:20px;

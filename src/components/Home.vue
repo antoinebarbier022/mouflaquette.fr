@@ -1,10 +1,33 @@
 <template>
     <div class="home">
         <div class="link-streaming">  
-            <ButtonMusic class="button-music" title="Youtube"        img="yt_logo_rgb_dark.png"                  link="www.youtube.com/channel/UCIyHFPn31xBb44gqxkoVn9g"/>
-            <ButtonMusic class="button-music" title="Deezer"         img="Colored_Full_White@2x.png"             link="www.deezer.com/fr/artist/54676462"/>
-            <ButtonMusic class="button-music" title="Spotify"        img="Spotify_Logo_RGB_Green.png"            link="open.spotify.com/artist/09pFOn63ilNCmgccHtQyqE"/>
-            <ButtonMusic class="button-music" title="Apple Music"    img="US-UK_Apple_Music_lockup_RGB_wht.svg"  link="itunes.apple.com/ca/artist/mouflaquettes/1444479500"/>
+            <ButtonMusic    class="button-music" title="Youtube"        
+                            img="yt_logo_rgb_dark.png"                  
+                            link="www.youtube.com/channel/UCIyHFPn31xBb44gqxkoVn9g"
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+            />
+            <ButtonMusic    class="button-music" 
+                            title="Deezer"         
+                            img="Colored_Full_White@2x.png"             
+                            link="www.deezer.com/fr/artist/54676462"
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+            />
+            <ButtonMusic    class="button-music" 
+                            title="Spotify"        
+                            img="Spotify_Logo_RGB_Green.png"            
+                            link="open.spotify.com/artist/09pFOn63ilNCmgccHtQyqE"
+                            data-aos="fade-right"
+                            data-aos-duration="2500"
+            />
+            <ButtonMusic    class="button-music" 
+                            title="Apple Music"    
+                            img="US-UK_Apple_Music_lockup_RGB_wht.svg"  
+                            link="itunes.apple.com/ca/artist/mouflaquettes/1444479500"
+                            data-aos="fade-left"
+                            data-aos-duration="2500"
+            />
         </div>
         
         <router-link :to="{name: 'notre-groupe'}">
