@@ -6,82 +6,54 @@
         <TemplateText :text="textPresentation" />
 
         <h4 >Nous sommes Paul, Aymeric et Amaury, nous formons les Mouflaquettes et voici notre histoire.</h4>
-        
-        <TemplateTextImage v-for="event in historique" :key="event.id" 
-                            :title="event.title" 
-                            :text="event.text"
-                            :image="event.url"
 
-                            /> <!--pour alterner image/texte on prend l'index %2 qui nous donne 1 ou 0 pour true ou false-->
-        
-
-
-        <!--
-        <div class="bloc-image-text" v-for="event in historique" :key="event.id">
+        <div class="bloc-text-media" v-for="event in historique" :key="event.id">
             <div class="bloc-text">
                 <h4 class="title">{{event.title}}</h4>
                 <p class="text">{{event.text}}</p>
             </div>
-            {{event.title}}
-            {{event.type}}
-            {{event.url}}
-            <figure :v-if="event.typeMedia!=`no-media`" class="bloc-image">
-                <img :src="require('@/assets/photos/'+event.url)" :alt="event.url" title=""/>
-
-                
-                <iframe :v-if="event.media==`video`" 
-                        width="300" 
-                        height="300" 
-                        style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;" 
-                        scrolling="no" 
-                        frameborder="no" 
-                        allow="autoplay" 
-                        :src="event.url">
-                </iframe>
-                
-            </figure>
-        </div>
-        -->
-
-        <iframe width="300" height="300" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/693149029&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe>
-        
-        <!--
-      <audio controls>
-        <source src="monAudio.mp3" type="audio/mpeg" />
-        <source src="monAudio.ogg" type="audio/ogg" />
-        <p>
-          Votre navigateur ne prend pas en charge l'audio HTML. Voici un
-          <a href="myAudio.mp4">
-            lien vers
-            le fichier audio
-          </a> pour le télécharger.
-        </p>
-      </audio>
--->
-        
-      <iframe
-        width="560"
-        height="300"
-        style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;"
-        src="https://www.youtube-nocookie.com/embed/yYwptNiN3qk"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      
+            <!-- conditions pour savoir quelle bloc de média afficher-->
+            <div class="bloc-media" v-if="event.media === 'image' && event.url" >
+                <figure class="bloc-image">
+                    <img :src="require('@/assets/photos/'+event.url)" alt="image">
+                </figure>
+            </div>
+            <div class="bloc-media" v-if="event.media === 'audio' && event.url">
+                <audio controls>
+                    <source src="monAudio.mp3" type="audio/mpeg" />
+                    <source src="monAudio.ogg" type="audio/ogg" />
+                    <p>Votre navigateur ne prend pas en charge l'audio HTML. Voici un <a href="myAudio.mp4">lien vers le fichier audio</a> pour le télécharger.</p>
+                </audio>
+            </div>
+            <div class="bloc-media" v-if="event.media === 'video' && event.url">
+                <iframe
+                    class="bloc-video"
+                    width="500"
+                    height="300"
+                    style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;"
+                    src="https://www.youtube-nocookie.com/embed/yYwptNiN3qk"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="bloc-no-media" v-if="event.media === 'no-media'">
+                no-media
+            </div> 
+        </div> 
 
     </div>
   </div>
 </template>
 
 <script>
-import TemplateTextImage from "@/components/content/template-text-image.vue"
+//import TemplateTextImage from "@/components/content/template-text-image.vue"
 import TemplateText from "@/components/content/template-text.vue"
 
     export default {
         name: "Notre-groupe",
         components: {
-            TemplateTextImage,
+            //TemplateTextImage,
             TemplateText
             },
             data(){
@@ -100,7 +72,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                         trouvée sur YouTube. Nous trouvons cet exercice fort intéressant et émettons l’idée de former 
                                         un groupe de musique. Coiffés d’une moustache et de rouflaquettes, nous nous appellerons les 
                                         Mouflaquettes.`
-                                ,type:"image"
+                                ,media:"image"
                                 ,url:"avril2018.jpg"
                             },
                             {   id:1,
@@ -110,15 +82,15 @@ import TemplateText from "@/components/content/template-text.vue"
                                         Amaury, séduit par ce travail, décide d’investir les quelques euros qu’il lui reste en poche à la fin 
                                         du mois dans un clavier maitre et un logiciel de MAO (Musique Assistée par Ordinateur). 
                                         Le processus de production est lancé et ne s’arrêtera plus …`
-                                ,type:"audio"
-                                ,url:""
+                                ,media:"audio"
+                                ,url:"jnjn"
                             },
                             {   id:2,
                                 title:"Août 2018"
                                 ,text:`Nous emménageons ensemble dans un grand appartement à Clermont-Ferrand. Dans cet appartement, 
                                         nous aménageons un studio de musique avec de bonnes enceintes, des mousses acoustiques et bien sûr … 
                                         des LEDs. Ce studio deviendra notre terrier nous y passerons tout notre temps libre.`
-                                ,type:"image"
+                                ,media:"image"
                                 ,url:"aout2018.jpg"
                             },
                             {   id:3,
@@ -127,7 +99,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                         le nom Bouquet Subtil. Fier de notre réalisation, nous fabriquons 100 exemplaires physiques de 
                                         cet album que nous décidons de déposer dans différents lieux publics de la ville afin de promouvoir 
                                         notre musique. Cette opération nous vaut notre premier article dans la presse.`
-                                ,type:"image"
+                                ,media:"image"
                                 ,url:"disques-decembre2018.jpg"
                             },
                             {   id:4,
@@ -141,7 +113,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                         notre disque d’or venait d’être livré. Nous soupçonnons un bug informatique 
                                         dans les serveurs de la SNEP qui aurait rajouté par erreur trois zéros à 
                                         notre nombre de ventes. Toujours est-il que nous pouvons dire que Bouquet Subtil est disque d’or.`
-                                ,type:"image"
+                                ,media:"image"
                                 ,url:"printemps-de-bourges-2019.jpg"
                             },
                             {   id:5,
@@ -149,8 +121,8 @@ import TemplateText from "@/components/content/template-text.vue"
                                 ,text:`Nous nous produisons pour la première fois en live et devant un public. 
                                         Cette expérience est si intense que nous tombons immédiatement amoureux de la scène. 
                                         Depuis, toutes nos musiques sont spécialement pensées pour le live.`
-                                ,type:"video"
-                                ,url:""
+                                ,media:"video"
+                                ,url:"hbh"
                             },
                             {   id:6,
                                 title:"Avril 2019"
@@ -158,14 +130,14 @@ import TemplateText from "@/components/content/template-text.vue"
                                         n’aurions pu imaginer nous retrouver là un jour. Ce moment reste la plus belle expérience 
                                         de notre jeune carrière et nous offre une visibilité énorme. Par la suite nous prenons 
                                         nos premiers selfies et signons nos premiers autographes. La vie d’artiste est lancée.`
-                                ,type:"image"
+                                ,media:"image"
                                 ,url:"printemps-de-bourges-2019.jpg"
                             },
                             {   id:7,
                                 title:"Été 2019"
                                 ,text:`Nous organisons notre première tournée de concerts, d’Henrichemont à Notre Dame de Monts, 
                                         nous parcourons la France avec pour seul carburant, la passion de la musique.`
-                                ,type:"image"
+                                ,media:"image"
                                 ,url:"ete2019.jpg"
                             },
                             {   id:8,
@@ -173,7 +145,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                 ,text:`Après un été riche en création et en rencontre, nous sortons notre second album, Velours.
                                     À l’heure actuelle notre plus grande fierté, nous vous invitons à aller l’écouter en cliquant
                                     sur le lien de la plateforme de votre choix`
-                                ,type:"no-media"
+                                ,media:"no-media"
                                 ,url:""
                                 
                             }
@@ -185,40 +157,93 @@ import TemplateText from "@/components/content/template-text.vue"
     };
 </script>
 
-<style>
+<style scoped>
+    #notre-groupe {
+        color: white;
+        text-align: left;
+        /* placer le footer en bas de la page notre groupe */
+        min-height: calc(100vh - 100px - 60px - 20px - 50px); /* - hauteur du footer et - hauteur du header - 
+                                                                                20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/
+    }
+
+    .texte-presentation-du-groupe {
+        padding-bottom: 40px;
+    }
+
+    .phrase-accroche {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 36px;
+    }
+
+    audio{
+        width:300px;
+        height:300px;
+        background-color: red;
+    }
 
 
-#notre-groupe {
-  color: white;
-  text-align: left;
+    /* Css général de l'historique  */
+    .bloc-text-media{
+        display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-items: space-around;
+        width:100%;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+    .bloc-text{
+        max-width:100%;
+        min-width:50%;
+        padding:20px;
+        font-size:1.1rem;
+    }
+    .bloc-media{
+        padding:20px;
+        display:flex;
+            justify-content: center;
+        min-width:calc(50% - 60px); /* moins le padding des blocs */
+        max-width:calc(50% - 60px);
+    }
+    .bloc-no-media{
+        display:none;
+    }
 
-  /* placer le footer en bas de la page notre groupe */
-  min-height: calc(
-    100vh - 100px - 60px - 20px - 50px
-  ); /* - hauteur du footer et - hauteur du header - 
-                                                                        20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/
-}
-.texte-presentation-du-groupe {
-  padding-bottom: 40px;
-}
+    .bloc-text > .text{
+        text-align:justify;
+    }
+    .bloc-media > .bloc-image img{
+        width:100%;
+        height:auto;
+        border-radius:5px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    }
+    /* permet d'alterner text-image droite-gauche */
+    .texte-presentation-du-groupe :nth-child(odd){
+        flex-direction: row-reverse;
+    }
 
-.phrase-accroche {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 36px;
-}
+    @media (max-width:1080px){
+        .bloc-text-media{
+            flex-direction: column;
+        }
+        .bloc-text{
+            width:100%;
+        }
+        /* Mettre texte suivie de l'image en colomne */
+        .texte-presentation-du-groupe :nth-child(odd){
+            flex-direction:column;
+        }
+        .texte-presentation-du-groupe :nth-child(even){
+            flex-direction:column;
+        }
 
-figure {
-  margin: 20px 0px 20px 0px;
-}
-
-.date {
-  font-weight: bold;
-}
-
-h4{
-    text-align:center;
-    font-size: 1.1rem;
-}
+        .bloc-media{
+            display: flex;
+                align-items: center; /* centrer le media*/
+            min-width:100%;
+        }
+    }
 </style>
