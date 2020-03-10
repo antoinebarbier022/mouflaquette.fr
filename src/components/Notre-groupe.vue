@@ -15,7 +15,7 @@
             data-aos-duration="1600"
             
             data-aos-once="true"
-            data-aos-anchor-placement="center-bottom">
+            data-aos-anchor-placement="bottom-bottom">
                 <h5 class="title">{{event.title}}</h5>
                 <p class="text">{{event.text}}</p>
             </div>
@@ -47,7 +47,7 @@
                         
                         data-aos-duration="1600"
                         data-aos-once="true"
-                        data-aos-anchor-placement="center-bottom">
+                        data-aos-anchor-placement="bottom-bottom">
                 <iframe
                     class="bloc-video"
                     style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;"

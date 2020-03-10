@@ -31,8 +31,11 @@
         </div>
         
         <router-link :to="{name: 'notre-groupe'}">
-            <div class="img-mouflaquettes">
-            </div>
+            <figure class="img-mouflaquettes">
+                <img src="@/assets/mouflaquettes.png" alt="">
+            </figure>
+            <!--<div class="img-mouflaquettes">
+            </div>-->
         </router-link>
         
     </div>
@@ -73,13 +76,15 @@ export default {
         margin-bottom:0;
     }
 
-    .img-mouflaquettes{
-        width:100%;
-        height:50vh;
+    .img-mouflaquettes img{
+        width:80vw;
+        max-width:80%;
+        height:auto;
+        /*height:50vh;
         background-image: url('~@/assets/mouflaquettes.png');
         background-repeat: no-repeat;
         background-size:contain;
-        background-position:center;
+        background-position:center;*/
 
     }
     
