@@ -1,31 +1,49 @@
 <template>
   <div id="notre-groupe">
     <h2 class="phrase-accroche">{{slogan}}</h2>
-    <div class="texte-presentation-du-groupe" data-aos="fade-right">
-
-        <TemplateText :text="textPresentation" />
-
+    <div class="texte-presentation-du-groupe">
+        <TemplateText class="" :text="textPresentation" />
+    </div>
         <h4 >Nous sommes Paul, Aymeric et Amaury, nous formons les Mouflaquettes et voici notre histoire.</h4>
 
-        <div class="bloc-text-media" v-for="event in historique" :key="event.id">
-            <div class="bloc-text">
-                <h4 class="title">{{event.title}}</h4>
+        <div class="bloc-text-media" 
+            v-for="event in historique" :key="event.id"
+            >
+            
+            <div class="bloc-text"
+            :data-aos=" event.url ? (event.id%2 ? 'fade-right': 'fade-left') : 'fade' "
+            data-aos-duration="1500"
+            data-aos-once="true"
+            data-aos-anchor-placement="center-bottom">
+                <h5 class="title">{{event.title}}</h5>
                 <p class="text">{{event.text}}</p>
             </div>
             <!-- conditions pour savoir quelle bloc de média afficher-->
-            <div class="bloc-media" v-if="event.media === 'image' && event.url" >
+            <div class="bloc-media" v-if="event.media === 'image' && event.url" 
+                        :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
+                        data-aos-duration="1500"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="center-bottom">
                 <figure class="bloc-image">
                     <img :src="require('@/assets/photos/'+event.url)" alt="image">
                 </figure>
             </div>
-            <div class="bloc-media" v-if="event.media === 'audio' && event.url">
+            <div class="bloc-media" v-if="event.media === 'audio' && event.url"
+                        :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
+                        data-aos-duration="1500"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="center-bottom">
                 <audio controls>
                     <source src="monAudio.mp3" type="audio/mpeg" />
                     <source src="monAudio.ogg" type="audio/ogg" />
                     <p>Votre navigateur ne prend pas en charge l'audio HTML. Voici un <a href="myAudio.mp4">lien vers le fichier audio</a> pour le télécharger.</p>
                 </audio>
             </div>
-            <div class="bloc-media" v-if="event.media === 'video' && event.url">
+            <div class="bloc-media" v-if="event.media === 'video' && event.url"
+                        :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
+                        data-aos-duration="1500"
+                        data-aos-once="true"
+                        data-aos-anchor-placement="center-bottom">
                 <iframe
                     class="bloc-video"
                     width="500"
@@ -41,8 +59,6 @@
                 no-media
             </div> 
         </div> 
-
-    </div>
   </div>
 </template>
 
@@ -167,20 +183,22 @@ import TemplateText from "@/components/content/template-text.vue"
     }
 
     .texte-presentation-du-groupe {
-        padding-bottom: 40px;
+        text-align: justify;
     }
+
+    h4, h5{
+         font-size:1.1rem;
+    }
+    h4{
+        text-align: center;
+    }
+
 
     .phrase-accroche {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
     font-size: 36px;
-    }
-
-    audio{
-        width:300px;
-        height:300px;
-        background-color: red;
     }
 
 
@@ -194,6 +212,11 @@ import TemplateText from "@/components/content/template-text.vue"
         margin-top:50px;
         margin-bottom:50px;
     }
+
+    .bloc-text-media[data-aos="fade"]{
+        transition-delay: 100ms;
+    }
+
     .bloc-text{
         max-width:100%;
         min-width:50%;
@@ -221,7 +244,8 @@ import TemplateText from "@/components/content/template-text.vue"
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     }
     /* permet d'alterner text-image droite-gauche */
-    .texte-presentation-du-groupe :nth-child(odd){
+    /* mettre odd ou even pour choisir si ça commence par image à droite ou à gauche */
+    #notre-groupe :nth-child(even){
         flex-direction: row-reverse;
     }
 
@@ -233,10 +257,10 @@ import TemplateText from "@/components/content/template-text.vue"
             width:100%;
         }
         /* Mettre texte suivie de l'image en colomne */
-        .texte-presentation-du-groupe :nth-child(odd){
+        #notre-groupe :nth-child(odd){
             flex-direction:column;
         }
-        .texte-presentation-du-groupe :nth-child(even){
+        #notre-groupe :nth-child(even){
             flex-direction:column;
         }
 
@@ -246,4 +270,7 @@ import TemplateText from "@/components/content/template-text.vue"
             min-width:100%;
         }
     }
+
+
+
 </style>

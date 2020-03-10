@@ -8,7 +8,13 @@ Vue.config.productionTip = false
 
 new Vue({
   created() {
-    AOS.init();
+    AOS.init({
+      disable: function() {
+        var maxWidth = 1080;
+        return window.innerWidth < maxWidth;
+      }
+    });
+    
   },
   router,
   render: h => h(App),
