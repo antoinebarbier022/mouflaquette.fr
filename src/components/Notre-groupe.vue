@@ -1,16 +1,16 @@
 <template>
   <div id="notre-groupe">
-    <h2 data-aos="fade" data-aos-duration="1000" class="phrase-accroche">{{slogan}}</h2>
+    <h2 data-aos="fade" data-aos-once="true" data-aos-duration="1000" class="phrase-accroche">{{slogan}}</h2>
     <div class="texte-presentation-du-groupe">
-        <TemplateText  data-aos="fade" data-aos-duration="1200" class="" :text="textPresentation" />
+        <TemplateText  data-aos="fade" data-aos-once="true" data-aos-duration="1200" class="" :text="textPresentation" />
     </div>
-        <h4 data-aos="fade" data-aos-duration="1500">Nous sommes Paul, Aymeric et Amaury, nous formons les Mouflaquettes et voici notre histoire.</h4>
+        <h4 data-aos="fade" data-aos-once="true" data-aos-duration="1500">Nous sommes Paul, Aymeric et Amaury, nous formons les Mouflaquettes et voici notre histoire.</h4>
 
         <div class="bloc-text-media" 
             v-for="event in historique" :key="event.id"
             >
             
-            <div class="bloc-text"
+            <div :class="event.media === 'no-media'?'bloc-text bloc-text-no-media' : 'bloc-text' "
             :data-aos=" event.url ? (event.id%2 ? 'fade-right': 'fade-left') : 'fade' "
             data-aos-duration="1600"
             
@@ -51,7 +51,7 @@
                 <iframe
                     class="bloc-video"
                     style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;"
-                    src="https://www.youtube-nocookie.com/embed/yYwptNiN3qk"
+                    :src="event.url"
                     frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -61,6 +61,10 @@
                 no-media
             </div> 
         </div> 
+
+
+    
+    
   </div>
 </template>
 
@@ -131,8 +135,8 @@ import TemplateText from "@/components/content/template-text.vue"
                                         notre disque d’or venait d’être livré. Nous soupçonnons un bug informatique 
                                         dans les serveurs de la SNEP qui aurait rajouté par erreur trois zéros à 
                                         notre nombre de ventes. Toujours est-il que nous pouvons dire que Bouquet Subtil est disque d’or.`
-                                ,media:"image"
-                                ,url:"printemps-de-bourges-2019.jpg"
+                                ,media:"video"
+                                ,url:"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMouflaquettes%2Fvideos%2F241269710116102%2F&show_text=0&width=560"
                             },
                             {   id:5,
                                 title:"Mars 2019"
@@ -140,7 +144,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                         Cette expérience est si intense que nous tombons immédiatement amoureux de la scène. 
                                         Depuis, toutes nos musiques sont spécialement pensées pour le live.`
                                 ,media:"video"
-                                ,url:"hbh"
+                                ,url:"https://www.youtube-nocookie.com/embed/yYwptNiN3qk"
                             },
                             {   id:6,
                                 title:"Avril 2019"
@@ -206,13 +210,20 @@ import TemplateText from "@/components/content/template-text.vue"
 
     /* Css général de l'historique  */
     .bloc-text-media{
-        display:flex;
+        display: grid;
+            grid-template-areas: "left right";
+            grid-template-columns: calc(50% - 25px) calc(50% - 25px); /* moins le gap de la grid soit 50px en tout */
+            align-items: center;
+            justify-items: center;
+            grid-column-gap: 50px;
+        
+        /*display:flex;
             flex-direction: row;
             align-items: center;
-            justify-items: space-around;
+            justify-items: space-around;*/
         width:100%;
-        margin-top:50px;
-        margin-bottom:50px;
+        padding-top:50px;
+        padding-bottom:50px;
     }
 
     .bloc-text-media[data-aos="fade"]{
@@ -222,16 +233,24 @@ import TemplateText from "@/components/content/template-text.vue"
     .bloc-text{
         max-width:100%;
         min-width:50%;
-        padding:20px;
         font-size:1.1rem;
+        grid-area: right;
+        
     }
     .bloc-media{
-        padding:20px;
+        width:100%;
         display:flex;
             justify-content: center;
-        min-width:calc(50% - 60px); /* moins le padding des blocs */
-        max-width:calc(50% - 60px);
+        min-width:100%;
+        max-width:100%;
+        grid-area: left;
     }
+
+    .bloc-text-no-media{
+        grid-column-start: left;
+        grid-column-end: right;
+    }
+
     .bloc-no-media{
         display:none;
     }
@@ -252,16 +271,21 @@ import TemplateText from "@/components/content/template-text.vue"
     }
     /* permet d'alterner text-image droite-gauche */
     /* mettre odd ou even pour choisir si ça commence par image à droite ou à gauche */
-    #notre-groupe :nth-child(even){
-        flex-direction: row-reverse;
+    
+    #notre-groupe :nth-child(odd){
+        /*flex-direction: row-reverse;*/
+        grid-template-areas: "right left";
     }
 
     @media (max-width:1080px){
+        
         .bloc-text-media{
+            display:flex;
             flex-direction: column;
         }
         .bloc-text{
             width:100%;
+            padding-bottom:20px;
         }
         /* Mettre texte suivie de l'image en colomne */
         #notre-groupe :nth-child(odd){
@@ -275,6 +299,7 @@ import TemplateText from "@/components/content/template-text.vue"
             display: flex;
                 align-items: center; /* centrer le media*/
             min-width:100%;
+            padding-top:20px;
         }
         .bloc-text-media .bloc-text .title{
             text-align: center;
