@@ -20,7 +20,7 @@ export default {
 
 @font-face {
  font-family: "Over There";
- src: url("~@/assets/Over-There.ttf") format("truetype");
+ src: url("~@/assets/font/Over-There.ttf") format("truetype");
 }
 
 #app {
