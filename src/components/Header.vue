@@ -127,7 +127,7 @@ h1{
 }
 
 .icon:hover, .link:hover{
-    opacity: 80%;
+    opacity: 0.8;
 }
 
     @media (max-width: 1080px) {
