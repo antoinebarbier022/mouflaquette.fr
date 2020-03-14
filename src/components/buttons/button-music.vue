@@ -14,7 +14,7 @@ export default {
     },
     computed:{
         image: function(){
-            return this.img ? require('@/assets/music-links' + this.img) : require('@/assets/logo.png') ; 
+            return this.img ? require('@/assets/music-links/' + this.img) : require('@/assets/logo.png') ; 
         }
     },
     methods: {
