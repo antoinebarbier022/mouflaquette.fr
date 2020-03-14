@@ -8,46 +8,32 @@
 
         <div class="bloc-text-media" 
             v-for="event in historique" :key="event.id"
+            data-aos="fade"
+            data-aos-duration="1600"
+            data-aos-once="true"
+            data-aos-anchor-placement="bottom-bottom"
             >
             
-            <div :class="event.media === 'no-media'?'bloc-text bloc-text-no-media' : 'bloc-text' "
-            :data-aos=" event.url ? (event.id%2 ? 'fade-right': 'fade-left') : 'fade' "
-            data-aos-duration="1600"
-            
-            data-aos-once="true"
-            data-aos-anchor-placement="bottom-bottom">
+            <div :class="event.media === 'no-media'?'bloc-text bloc-text-no-media' : 'bloc-text' ">
                 <h5 class="title">{{event.title}}</h5>
                 <p class="text">{{event.text}}</p>
             </div>
             <!-- conditions pour savoir quelle bloc de média afficher-->
             <div class="bloc-media" v-if="event.media === 'image' && event.url" 
-                        :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
-                        
-                        data-aos-duration="1600"
-                        data-aos-once="true"
-                        data-aos-anchor-placement="center-bottom">
+                        >
                 <figure class="bloc-image">
                     <img :src="require('@/assets/photos/'+event.url)" alt="image">
                 </figure>
             </div>
             <div class="bloc-media" v-if="event.media === 'audio' && event.url"
-                        :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
-                       
-                        data-aos-duration="1600"
-                        data-aos-once="true"
-                        data-aos-anchor-placement="center-bottom">
+                        >
                 <audio controls>
                     <source src="monAudio.mp3" type="audio/mpeg" />
                     <source src="monAudio.ogg" type="audio/ogg" />
                     <p>Votre navigateur ne prend pas en charge l'audio HTML. Voici un <a href="myAudio.mp4">lien vers le fichier audio</a> pour le télécharger.</p>
                 </audio>
             </div>
-            <div class="bloc-media" v-if="event.media === 'video' && event.url"
-                        :data-aos="event.id%2 ? 'fade-left': 'fade-right'"
-                        
-                        data-aos-duration="1600"
-                        data-aos-once="true"
-                        data-aos-anchor-placement="bottom-bottom">
+            <div class="bloc-media" v-if="event.media === 'video' && event.url">
                 <iframe
                     class="bloc-video"
                     style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;"
