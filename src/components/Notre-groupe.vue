@@ -268,6 +268,7 @@ import TemplateText from "@/components/content/template-text.vue"
      .bloc-media > .bloc-video {
         width:500px;
         height:300px;
+        min-height:auto;
     }
     /* permet d'alterner text-image droite-gauche */
     /* mettre odd ou even pour choisir si ça commence par image à droite ou à gauche */

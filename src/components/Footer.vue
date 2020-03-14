@@ -106,12 +106,17 @@ a{
     }
 
     @media (max-width: 550px) {
+        footer{
+            height: 200px;
+            }
         .icon-notre-groupe{
             display:flex;
         }
     }
     @media (max-width: 350px) {
-
+        footer{
+            height: 250px;
+            }
         .menu{
             min-width: 100px;
         }

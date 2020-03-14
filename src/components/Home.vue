@@ -79,7 +79,6 @@ export default {
     .img-mouflaquettes img{
         width:80vw;
         max-width:80%;
-        height:auto;
         /*height:50vh;
         background-image: url('~@/assets/mouflaquettes.png');
         background-repeat: no-repeat;
