@@ -9,7 +9,7 @@
         <div class="bloc-text-media" 
             v-for="event in historique" :key="event.id"
             data-aos="fade"
-            data-aos-duration="1600"
+            
             data-aos-once="true"
             data-aos-anchor-placement="bottom-bottom"
             >
