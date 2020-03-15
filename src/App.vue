@@ -59,7 +59,7 @@ body{
 }*/
 
 body {
-	background: linear-gradient(-45deg, #6f52ee, #8945c9, #281a66, #6750eb);
+	background: linear-gradient(-45deg, #6f52ee, #8945c9, #1a2866, #6750eb);
 	background-size: 400% 400%;
   background-attachment: fixed;
 	animation: gradient 30s ease infinite;
