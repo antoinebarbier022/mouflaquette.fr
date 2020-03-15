@@ -30,7 +30,7 @@ export default {
         
     }
     .main{
-        min-height: calc(100vh - 330px);
+        min-height: calc(100vh - 380px);
         padding-top:50px;
     }
 

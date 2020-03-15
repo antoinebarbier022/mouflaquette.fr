@@ -59,7 +59,7 @@ export default {
         display:flex;
             flex-direction: column;
         /* placer le footer en bas de la page notre groupe */
-            min-height: calc(100vh - 360px); /* - hauteur du footer et - hauteur du header - 
+            min-height: calc(100vh - 380px); /* - hauteur du footer et - hauteur du header - 
                                                                     20px(hauteur du padding-top du container) - hauteur du padding-top de ce bloc*/
 
     }
