@@ -90,8 +90,8 @@ import TemplateText from "@/components/content/template-text.vue"
                                         Amaury, séduit par ce travail, décide d’investir les quelques euros qu’il lui reste en poche à la fin 
                                         du mois dans un clavier maitre et un logiciel de MAO (Musique Assistée par Ordinateur). 
                                         Le processus de production est lancé et ne s’arrêtera plus …`
-                                ,media:"audio"
-                                ,url:"jnjn"
+                                ,media:"video"
+                                ,url:"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/388844193&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                             },
                             {   id:2,
                                 title:"Août 2018"
@@ -122,7 +122,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                         dans les serveurs de la SNEP qui aurait rajouté par erreur trois zéros à 
                                         notre nombre de ventes. Toujours est-il que nous pouvons dire que Bouquet Subtil est disque d’or.`
                                 ,media:"video"
-                                ,url:"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMouflaquettes%2Fvideos%2F241269710116102%2F&show_text=0&width=560"
+                                ,url:"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMouflaquettes%2Fvideos%2F241269710116102%2F&show_text=0"
                             },
                             {   id:5,
                                 title:"Mars 2019"
