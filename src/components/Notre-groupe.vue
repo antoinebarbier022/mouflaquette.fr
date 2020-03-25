@@ -152,7 +152,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                 title:"Septembre 2019"
                                 ,text:`Après un été riche en création et en rencontre, nous sortons notre second album, Velours.
                                     À l’heure actuelle notre plus grande fierté, nous vous invitons à aller l’écouter en cliquant
-                                    sur le lien de la plateforme de votre choix`
+                                    sur le lien de la plateforme de votre choix.`
                                 ,media:"no-media"
                                 ,url:""
                                 
