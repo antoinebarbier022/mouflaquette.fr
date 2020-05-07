@@ -6,7 +6,7 @@
                 <a href="https://www.instagram.com/Mouflaquettes/" target="_blank" title="Instagram" class="link icon instagram"></a>
         </div>
         <p>Nous contacter : <a class="email" href="mailto:mouflaquettes@gmail.com" target="_blank" title="mouflaquettes@gmail.com">mouflaquettes@gmail.com</a></p>
-        <p>Tous droits réservés © 2020 mouflaquettes.fr  /  Mouflaquettes.fr est réalisé par<a class="site-du-createur" href="https://antoinebarbier.fr" target="_blank" title="antoinearbier.fr">Antoine Barbier</a></p>
+        <p>Mouflaquettes.fr est réalisé par<a class="site-du-createur" href="https://antoinebarbier.fr" target="_blank" title="antoinearbier.fr">Antoine Barbier</a></p>
     </footer>
 </template>
 
@@ -76,12 +76,6 @@ a{
 }
 
 
-.text-notre-groupe{
-    display:none;
-    display: flex;
-        justify-content: center;
-    text-align: center;
-}
 
 .facebook{
     background-image: url('~@/assets/reseaux-sociaux/facebook@3x.png');
