@@ -68,7 +68,7 @@ import TemplateText from "@/components/content/template-text.vue"
                 return{
                     slogan:"Une moustache, des rouflaquettes, c’est mouflaquettes."
                     ,textPresentation: `Groupe de musique électronique aux influences techno, dance et retro, Mouflaquettes est avant tout une bouffée d’énergie et 
-                                    de gaieté. Après avoir sortis un premier album, Bouquet subtil, en décembre 2018 et réalisés une série de concerts, 
+                                    de gaieté. Après avoir sorti un premier album, Bouquet subtil, en décembre 2018 et réalisé une série de concerts, 
                                     nous avons produit un nouvel album, Velours, en septembre 2019. Depuis, nous préparons dans 
                                     l’ombre un retour explosif marqué par la sortie de nouveaux titres et le lancement d’une 
                                     nouvelle tournée. Tenez vous prêts, les Mouflaquettes arrivent…`
@@ -104,7 +104,7 @@ import TemplateText from "@/components/content/template-text.vue"
                             {   id:3,
                                 title:"Décembre 2018"
                                 ,text:`Après des mois de production intense, notre premier album sort. Nous lui donnons 
-                                        le nom Bouquet Subtil. Fier de notre réalisation, nous fabriquons 100 exemplaires physiques de 
+                                        le nom de Bouquet Subtil. Fiers de notre réalisation, nous fabriquons 100 exemplaires physiques de 
                                         cet album que nous décidons de déposer dans différents lieux publics de la ville afin de promouvoir 
                                         notre musique. Cette opération nous vaut notre premier article dans la presse.`
                                 ,media:"image"
@@ -114,7 +114,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                 title:"Janvier 2019"
                                 ,text:`Nous atteignons les 50 équivalents ventes de notre album. Dans la foulée, nous recevons 
                                         un mail de la SNEP (société qui gère l’industrie du disque en France) nous annonçant que 
-                                        nous avons vendu 50 000 albums. Or qui dit 50000 ventes d’album dit disque d’or. 
+                                        nous avons vendu 50 000 albums. Or qui dit 50000 ventes d’albums dit disque d’or. 
                                         Croyant à une blague, nous supprimons ce mail sans nous en inquiéter plus que ça. 
                                         Pourtant, une semaine plus tard nous recevons dans notre boîte aux lettres 
                                         un avis de passage de la poste au nom du groupe. Aussi incroyable que cela puisse paraître, 
@@ -150,7 +150,7 @@ import TemplateText from "@/components/content/template-text.vue"
                             },
                             {   id:8,
                                 title:"Septembre 2019"
-                                ,text:`Après un été riche en création et en rencontre, nous sortons notre second album, Velours.
+                                ,text:`Après un été riche en création et en rencontres, nous sortons notre second album, Velours.
                                     À l’heure actuelle notre plus grande fierté, nous vous invitons à aller l’écouter en cliquant
                                     sur le lien de la plateforme de votre choix.`
                                 ,media:"no-media"
