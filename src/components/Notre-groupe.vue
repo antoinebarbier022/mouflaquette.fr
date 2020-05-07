@@ -25,13 +25,15 @@
                     <img :src="require('@/assets/photos/'+event.url)" alt="image">
                 </figure>
             </div>
-            <div class="bloc-media" v-if="event.media === 'audio' && event.url"
-                        >
-                <audio controls>
-                    <source src="monAudio.mp3" type="audio/mpeg" />
-                    <source src="monAudio.ogg" type="audio/ogg" />
-                    <p>Votre navigateur ne prend pas en charge l'audio HTML. Voici un <a href="myAudio.mp4">lien vers le fichier audio</a> pour le télécharger.</p>
-                </audio>
+            <div class="bloc-media" v-if="event.media === 'video-facebook' && event.url">
+                <iframe
+                    class="bloc-video-facebook"
+                    style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); border-radius:10px;"
+                    :src="event.url"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
             </div>
             <div class="bloc-media" v-if="event.media === 'video' && event.url">
                 <iframe
@@ -121,7 +123,7 @@ import TemplateText from "@/components/content/template-text.vue"
                                         notre disque d’or venait d’être livré. Nous soupçonnons un bug informatique 
                                         dans les serveurs de la SNEP qui aurait rajouté par erreur trois zéros à 
                                         notre nombre de ventes. Toujours est-il que nous pouvons dire que Bouquet Subtil est disque d’or.`
-                                ,media:"video"
+                                ,media:"video-facebook"
                                 ,url:"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMouflaquettes%2Fvideos%2F241269710116102%2F&show_text=0"
                             },
                             {   id:5,
@@ -256,6 +258,10 @@ import TemplateText from "@/components/content/template-text.vue"
         height:300px;
         min-height:auto;
     }
+    .bloc-media > .bloc-video-facebook {
+        width:500px;
+        height:280px;
+    }
     /* permet d'alterner text-image droite-gauche */
     /* mettre odd ou even pour choisir si ça commence par image à droite ou à gauche */
     
@@ -296,6 +302,11 @@ import TemplateText from "@/components/content/template-text.vue"
         .bloc-media > .bloc-video {
             width:100%;
             height:300px;
+        }
+        .bloc-media > .bloc-video-facebook {
+            width:100%;
+            height:50vw;
+            
         }
      }
 

@@ -1,7 +1,6 @@
 <template>
     <footer>
         <div class="menu">
-                <router-link :to="{name: 'notre-groupe'}" title="Notre groupe" class="icon icon-notre-groupe"></router-link>
                 <a href="https://www.facebook.com/Mouflaquettes/" target="_blank" title="Facebook" class="link icon facebook"></a>
                 <a href="https://twitter.com/mouflaquettes" target="_blank" title="Twitter" class="link icon twitter"></a>
                 <a href="https://www.instagram.com/Mouflaquettes/" target="_blank" title="Instagram" class="link icon instagram"></a>
@@ -21,7 +20,7 @@ export default {
 
 footer{
     width:100%;
-    height: 130px;
+    height: 200px;
     padding-bottom:20px;
     display:flex;
         justify-content:flex-end;
@@ -41,11 +40,11 @@ a{
 }
 .menu{
     display:none;
-
     margin:auto;
+    padding-top:10px;
     max-width:400px;
     min-width:300px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
         justify-content: space-around;
         
 }
@@ -73,9 +72,15 @@ a{
     background-size: auto 40px;
     padding:5px;
     border-radius: 100%;
+    display:none;
 }
-.icon-notre-groupe{
-        display:none;
+
+
+.text-notre-groupe{
+    display:none;
+    display: flex;
+        justify-content: center;
+    text-align: center;
 }
 
 .facebook{
@@ -110,6 +115,9 @@ a{
             height: 200px;
             }
         .icon-notre-groupe{
+            display:flex;
+        }
+        .text-notre-groupe{
             display:flex;
         }
     }

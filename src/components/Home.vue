@@ -33,6 +33,7 @@
         <router-link :to="{name: 'notre-groupe'}">
             <figure class="img-mouflaquettes">
                 <img src="@/assets//photos/mouflaquettes.png" alt="">
+                <legend><router-link :to="{name: 'notre-groupe'}" title="Notre groupe" class="text-notre-groupe">Découvrir notre Groupe !</router-link></legend>
             </figure>
             <!--<div class="img-mouflaquettes">
             </div>-->
@@ -86,6 +87,24 @@ export default {
         background-position:center;*/
 
     }
+
+
+    legend .text-notre-groupe{
+        display:none;
+        width:100%;
+        text-align: center;
+
+        padding-top:5px;
+        padding-bottom:5px;
+        margin-bottom:20px;
+        cursor:pointer;
+        font-weight: 700;
+        font-size: 18px;
+        border:1px solid rgba(255, 255, 255, 0.705);
+        border-radius: 5px;
+        background-color:rgba(255, 255, 255, 0.15);
+        
+    }
     
 
      @media (max-width: 1080px) {
@@ -110,6 +129,25 @@ export default {
             margin-top:20px;
         }
      }
+
+         @media (max-width: 550px) {
+            legend .text-notre-groupe{
+                display:flex;
+                    justify-content: center;
+                    align-content: center;
+            }
+            figure{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                    align-items: center;
+            }
+            legend{
+                display:block;
+                width:80%;
+                justify-items: center;
+            }
+        }
      
 
 </style>
