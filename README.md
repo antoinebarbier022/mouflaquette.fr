@@ -1,5 +1,10 @@
 # mouflaquettes-website
 
+Lien du site : [https://www.mouflaquettes.fr](https://www.mouflaquettes.fr)
+
+![Page d'accueil](images-readme/site-mouflaquettes.png)
+
+
 ## Project setup
 ```
 npm install
